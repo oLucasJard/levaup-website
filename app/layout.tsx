@@ -12,7 +12,21 @@ export const metadata: Metadata = {
   title: "LevaUp - A Nova Era da Mobilidade Urbana em Paraíso do Tocantins",
   description:
     "Plataforma de mobilidade urbana com foco em justiça, segurança e eficiência. Para passageiros e motoristas em Paraíso do Tocantins.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+      {
+        url: '/favicon.ico',
+        sizes: 'any',
+      },
+    ],
+    apple: '/favicon.svg',
+  },
+  manifest: '/manifest.json',
 }
 
 export default function RootLayout({

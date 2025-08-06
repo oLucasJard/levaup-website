@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle with terracotta orange color -->
+  <circle cx="16" cy="16" r="16" fill="#D84315"/>
+  
+  <!-- Car silhouette -->
+  <path d="M8 20c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v1c0 .6-.4 1-1 1H9c-.6 0-1-.4-1-1v-1z" fill="white"/>
+  
+  <!-- Car windows -->
+  <path d="M10 14h6v3h-6v-3z" fill="white"/>
+  <path d="M16 14h4v3h-4v-3z" fill="white"/>
+  
+  <!-- Car wheels -->
+  <circle cx="10" cy="22" r="1.5" fill="#D84315"/>
+  <circle cx="22" cy="22" r="1.5" fill="#D84315"/>
+  
+  <!-- Lightning bolt -->
+  <path d="M24 8l-1.5 3h2l-1 1.5 3-4.5h-2l1-1.5-1.5 2z" fill="#FFB74D"/>
+</svg> 
