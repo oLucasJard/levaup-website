@@ -3,6 +3,8 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import type { Metadata } from "next"
+import { SEOBreadcrumb } from "@/components/seo-breadcrumb"
 import {
   MapPin,
   DollarSign,
@@ -17,10 +19,40 @@ import {
   CheckCircle,
 } from "lucide-react"
 
+export const metadata: Metadata = {
+  title: "Para Passageiros - Solicite Corridas com Preços Justos",
+  description: "LevaUp Passageiros: Corridas com preço justo, GPS preciso e segurança total. Ganhe 200 pontos de bônus na primeira viagem. LevaUp Carro e Moto disponíveis em Paraíso/TO.",
+  keywords: [
+    "solicitar corrida Paraíso",
+    "app de transporte passageiro",
+    "corrida barata Paraíso TO",
+    "LevaUp Passageiro",
+    "chamar carro Paraíso",
+    "mototáxi app Paraíso",
+    "transporte seguro Tocantins",
+    "GPS preciso",
+    "preço justo corrida"
+  ],
+  openGraph: {
+    title: "LevaUp Passageiros - Corridas com Preços Justos em Paraíso/TO",
+    description: "Solicite corridas com preços justos, GPS preciso e segurança total. Ganhe 200 pontos de bônus!",
+    url: "https://levaup.com.br/passageiro",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://levaup.com.br/passageiro",
+  },
+}
+
 export default function PassageiroPage() {
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
+    <>
+      <SEOBreadcrumb items={[
+        { name: 'Home', url: '/' },
+        { name: 'Para Passageiros', url: '/passageiro' }
+      ]} />
+      <div className="flex flex-col">
+        {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -320,8 +352,8 @@ export default function PassageiroPage() {
           </p>
 
           <div className="max-w-md mx-auto space-y-4">
-            <form className="flex gap-2">
-              <Input type="email" placeholder="Seu melhor e-mail" className="bg-background text-foreground" />
+            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+              <Input type="email" placeholder="Seu melhor e-mail" className="bg-background text-foreground" required />
               <Button type="submit" variant="secondary">
                 Cadastrar
               </Button>
@@ -339,6 +371,7 @@ export default function PassageiroPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

@@ -1,26 +1,44 @@
 {
-  "name": "LevaUp - Nova Era da Mobilidade Urbana",
+  "name": "LevaUp - Mobilidade Urbana em Paraíso do Tocantins",
   "short_name": "LevaUp",
-  "description": "Plataforma de mobilidade urbana com foco em justiça, segurança e eficiência",
+  "description": "App de mobilidade urbana com comissão de 10% para motoristas e preços justos. Suporte local 24/7 em Paraíso/TO.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#D84315",
-  "theme_color": "#D84315",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FF8000",
+  "orientation": "portrait-primary",
+  "categories": ["transportation", "lifestyle", "business"],
+  "lang": "pt-BR",
+  "dir": "ltr",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/favicon.png",
       "sizes": "32x32",
-      "type": "image/svg+xml"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/favicon.svg",
+      "src": "/favicon.png",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/favicon.svg",
+      "src": "/favicon.png",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "/logo-preto.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "LevaUp App - Tela Inicial"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 } 

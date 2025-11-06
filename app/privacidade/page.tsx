@@ -1,5 +1,31 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Política de Privacidade | LevaUp - LGPD",
+  description: "Política de Privacidade do LevaUp conforme LGPD. Saiba como coletamos, usamos e protegemos seus dados pessoais. Transparência total na proteção de informações.",
+  keywords: [
+    "política de privacidade LevaUp",
+    "LGPD LevaUp",
+    "proteção de dados LevaUp",
+    "privacidade",
+    "dados pessoais"
+  ],
+  openGraph: {
+    title: "Política de Privacidade | LevaUp",
+    description: "Conheça nossa política de privacidade conforme LGPD.",
+    url: "https://levaup.com.br/privacidade",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://levaup.com.br/privacidade",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+}
 
 export default function PrivacidadePage() {
   return (
@@ -223,7 +249,7 @@ export default function PrivacidadePage() {
                   <br />
                   Paraíso do Tocantins - TO
                   <br />
-                  E-mail: contato@levaup.com.br
+                  E-mail: contatolevaup@gmail.com
                   <br />
                   Site: levaup.com.br
                 </p>

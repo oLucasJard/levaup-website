@@ -1,15 +1,18 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 import { Mail, Phone, MapPin, Clock, Instagram, Facebook, MessageCircle } from "lucide-react"
 
 export default function ContatoPage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
+        {/* Hero Section */}
+        <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="container text-center space-y-8">
           <Badge variant="secondary" className="w-fit mx-auto">
             Contato
@@ -34,7 +37,7 @@ export default function ContatoPage() {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold">E-mail Geral</h3>
-                <p className="text-sm text-muted-foreground">contato@levaup.com.br</p>
+                <p className="text-sm text-muted-foreground">contatolevaup@gmail.com</p>
               </CardContent>
             </Card>
 
@@ -77,28 +80,28 @@ export default function ContatoPage() {
                 <p className="text-muted-foreground">Preencha o formulário abaixo e entraremos em contato em breve</p>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Nome Completo</label>
-                      <Input placeholder="Seu nome completo" />
+                      <label htmlFor="nome" className="text-sm font-medium mb-2 block">Nome Completo</label>
+                      <Input id="nome" placeholder="Seu nome completo" required />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">E-mail</label>
-                      <Input type="email" placeholder="seu@email.com" />
+                      <label htmlFor="email" className="text-sm font-medium mb-2 block">E-mail</label>
+                      <Input id="email" type="email" placeholder="seu@email.com" required />
                     </div>
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Telefone (Opcional)</label>
-                    <Input placeholder="(63) 99999-9999" />
+                    <label htmlFor="telefone" className="text-sm font-medium mb-2 block">Telefone (Opcional)</label>
+                    <Input id="telefone" placeholder="(63) 99999-9999" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Assunto</label>
-                    <Input placeholder="Sobre o que você gostaria de falar?" />
+                    <label htmlFor="assunto" className="text-sm font-medium mb-2 block">Assunto</label>
+                    <Input id="assunto" placeholder="Sobre o que você gostaria de falar?" required />
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Mensagem</label>
-                    <Textarea placeholder="Descreva sua dúvida, sugestão ou comentário..." rows={5} />
+                    <label htmlFor="mensagem" className="text-sm font-medium mb-2 block">Mensagem</label>
+                    <Textarea id="mensagem" placeholder="Descreva sua dúvida, sugestão ou comentário..." rows={5} required />
                   </div>
                   <Button type="submit" className="w-full">
                     Enviar Mensagem
@@ -165,13 +168,35 @@ export default function ContatoPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex space-x-4">
-                    <Button variant="outline" size="sm" className="flex items-center space-x-2 bg-transparent">
-                      <Instagram className="h-4 w-4" />
-                      <span>Instagram</span>
+                    <Button 
+                      asChild 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex items-center space-x-2 bg-transparent"
+                    >
+                      <Link 
+                        href="https://www.instagram.com/levaup.to/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Instagram className="h-4 w-4" />
+                        <span>Instagram</span>
+                      </Link>
                     </Button>
-                    <Button variant="outline" size="sm" className="flex items-center space-x-2 bg-transparent">
-                      <Facebook className="h-4 w-4" />
-                      <span>Facebook</span>
+                    <Button 
+                      asChild 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex items-center space-x-2 bg-transparent"
+                    >
+                      <Link 
+                        href="https://www.facebook.com/share/1Eud8vrfDK/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Facebook className="h-4 w-4" />
+                        <span>Facebook</span>
+                      </Link>
                     </Button>
                   </div>
                 </CardContent>

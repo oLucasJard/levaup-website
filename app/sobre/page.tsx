@@ -2,12 +2,43 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import type { Metadata } from "next"
+import { SEOBreadcrumb } from "@/components/seo-breadcrumb"
 import { Target, Eye, Heart, Users, MapPin, Lightbulb } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Sobre Nós - BrandUp Hub | História e Missão",
+  description: "Conheça a BrandUp Hub, empresa por trás do LevaUp. Nossa missão é democratizar a mobilidade urbana no interior do Brasil com tecnologia, transparência e compromisso local.",
+  keywords: [
+    "BrandUp Hub",
+    "sobre LevaUp",
+    "empresa LevaUp",
+    "história LevaUp",
+    "missão LevaUp",
+    "valores LevaUp",
+    "mobilidade Paraíso TO",
+    "startup Tocantins"
+  ],
+  openGraph: {
+    title: "Sobre a BrandUp Hub - Empresa por trás do LevaUp",
+    description: "Conheça nossa história, missão e valores. Comprometidos em transformar a mobilidade urbana no interior do Brasil.",
+    url: "https://levaup.com.br/sobre",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://levaup.com.br/sobre",
+  },
+}
 
 export default function SobrePage() {
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
+    <>
+      <SEOBreadcrumb items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sobre Nós', url: '/sobre' }
+      ]} />
+      <div className="flex flex-col">
+        {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="container text-center space-y-8">
           <Badge variant="secondary" className="w-fit mx-auto">
@@ -298,6 +329,7 @@ export default function SobrePage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

@@ -2,13 +2,91 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import type { Metadata } from "next"
 import { Users, Car, HelpCircle, Mail } from "lucide-react"
 
+export const metadata: Metadata = {
+  title: "FAQ - Perguntas Frequentes | Dúvidas sobre LevaUp",
+  description: "Tire suas dúvidas sobre o LevaUp. Perguntas frequentes sobre cadastro, comissões, preços, segurança, LevaUp Rewards, Club Pro e mais. Respostas para passageiros e motoristas.",
+  keywords: [
+    "dúvidas LevaUp",
+    "FAQ LevaUp",
+    "como funciona LevaUp",
+    "perguntas LevaUp",
+    "ajuda LevaUp",
+    "suporte LevaUp",
+    "como baixar LevaUp",
+    "comissão LevaUp",
+    "cadastro motorista"
+  ],
+  openGraph: {
+    title: "FAQ - Perguntas Frequentes sobre LevaUp",
+    description: "Encontre respostas para suas dúvidas sobre passageiros, motoristas e funcionamento do LevaUp.",
+    url: "https://levaup.com.br/faq",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://levaup.com.br/faq",
+  },
+}
+
 export default function FAQPage() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Como baixar o app LevaUp?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'O app LevaUp estará disponível em breve na Google Play Store e App Store. Cadastre seu e-mail em nosso site para ser notificado assim que o app for lançado e ganhar 200 pontos de bônus na primeira corrida!'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Como funciona o sistema de preços?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Nossos preços são calculados de forma justa e transparente, baseados na distância e tempo da viagem. Não temos taxas escondidas ou aumentos abusivos. Você sempre saberá o valor antes de confirmar a corrida.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Qual a comissão do LevaUp?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Nossa comissão é de apenas 10%, muito menor que a concorrência. Para os 20 motoristas fundadores, oferecemos comissão especial de apenas 8% nos primeiros 2 meses, além de outros benefícios exclusivos.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Como me cadastrar como motorista?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Acesse nossa página "Para Motoristas" e preencha o formulário de interesse. Nossa equipe entrará em contato para orientar sobre os documentos necessários e o processo de cadastro. Temos apenas 20 vagas para motoristas fundadores!'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Quando o LevaUp será lançado?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Estamos finalizando os últimos detalhes para garantir a melhor experiência possível. O lançamento está previsto para breve. Cadastre-se em nosso site para ser o primeiro a saber e ganhar benefícios exclusivos!'
+        }
+      }
+    ]
+  }
+
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <div className="flex flex-col">
+        {/* Hero Section */}
+        <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="container text-center space-y-8">
           <Badge variant="secondary" className="w-fit mx-auto">
             Perguntas Frequentes
@@ -253,7 +331,7 @@ export default function FAQPage() {
                   </AccordionTrigger>
                   <AccordionContent>
                     Você pode entrar em contato conosco através do formulário em nossa página de contato, pelos e-mails
-                    específicos (contato@levaup.com.br) ou através de nossas redes sociais. Valorizamos muito o feedback
+                    específicos (contatolevaup@gmail.com) ou através de nossas redes sociais. Valorizamos muito o feedback
                     da comunidade!
                   </AccordionContent>
                 </AccordionItem>
@@ -281,6 +359,7 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

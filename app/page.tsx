@@ -1,171 +1,169 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
-import Image from "next/image"
-import { MapPin, Shield, DollarSign, Headphones } from "lucide-react"
+import { HeroSection } from "@/components/sections/hero-section"
+import { FeaturesSection } from "@/components/sections/features-section"
+import { StatsSection } from "@/components/sections/stats-section"
+import { TestimonialsSection } from "@/components/sections/testimonials-section"
+import { ComparisonSection } from "@/components/sections/comparison-section"
+import { CTASection } from "@/components/sections/cta-section"
+import { MapPin, Shield, DollarSign, Headphones, Zap, Users } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "LevaUp - App de Mobilidade Urbana em Paraíso do Tocantins",
+  description: "LevaUp: O melhor app de transporte em Paraíso/TO. Comissão de 10% para motoristas, preços justos para passageiros. Suporte local 24/7, segurança total. Cadastre-se e ganhe 200 pontos!",
+  keywords: [
+    "LevaUp",
+    "app transporte Paraíso TO",
+    "mobilidade urbana Paraíso Tocantins",
+    "corrida app Paraíso",
+    "motorista app Paraíso",
+    "Uber Paraíso",
+    "99 Paraíso",
+    "transporte Paraíso do Tocantins",
+    "comissão 10%",
+    "BrandUp Hub"
+  ],
+  alternates: {
+    canonical: "https://levaup.com.br",
+  },
+}
 
 export default function HomePage() {
+  const features = [
+    {
+      icon: MapPin,
+      title: "Geolocalização Precisa",
+      description: "Sistema GPS avançado que elimina erros de localização. Você sempre sabe onde está seu motorista.",
+      color: "text-blue-600"
+    },
+    {
+      icon: DollarSign,
+      title: "Preço Justo",
+      description: "Comissão de apenas 10%. Sem taxas escondidas ou surpresas desagradáveis.",
+      color: "text-green-600"
+    },
+    {
+      icon: Headphones,
+      title: "Suporte Local 24/7",
+      description: "Ponto de apoio físico em Paraíso + atendimento online sempre disponível.",
+      color: "text-purple-600"
+    },
+    {
+      icon: Shield,
+      title: "Segurança Total",
+      description: "Botão de pânico, compartilhamento de viagem e motoristas verificados.",
+      color: "text-red-600"
+    },
+    {
+      icon: Zap,
+      title: "Corridas Rápidas",
+      description: "Algoritmo inteligente que encontra o motorista mais próximo em segundos.",
+      color: "text-yellow-600"
+    },
+    {
+      icon: Users,
+      title: "Comunidade Local",
+      description: "Motoristas e passageiros da sua cidade, gerando renda local.",
+      color: "text-indigo-600"
+    }
+  ]
+
+  const stats = [
+    { value: "10", suffix: "%", label: "Comissão para motoristas" },
+    { value: "200", suffix: "+", label: "Pontos de bônus inicial" },
+    { value: "24", suffix: "/7", label: "Suporte disponível" }
+  ]
+
+  const testimonials = [
+    {
+      name: "Maria Silva",
+      role: "Passageira",
+      content: "Finalmente um app que funciona de verdade! Nunca mais tive problema com localização.",
+      rating: 5
+    },
+    {
+      name: "João Santos",
+      role: "Passageiro",
+      content: "Os preços são justos e o atendimento é excelente. Recomendo para todos!",
+      rating: 5
+    },
+    {
+      name: "Ana Costa",
+      role: "Passageira",
+      content: "Me sinto muito mais segura usando o LevaUp. Os recursos de segurança são incríveis!",
+      rating: 5
+    }
+  ]
+
+  const comparisonItems = [
+    {
+      title: "Comissão",
+      competitors: "20-30%",
+      levaup: "Apenas 10%",
+      isHighlight: true
+    },
+    {
+      title: "Suporte",
+      competitors: "Online apenas",
+      levaup: "Local + Online"
+    },
+    {
+      title: "Transparência",
+      competitors: "Taxas ocultas",
+      levaup: "100% Transparente"
+    },
+    {
+      title: "Pagamento",
+      competitors: "Semanal",
+      levaup: "Semanal"
+    }
+  ]
+
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-primary/5">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-        <div className="container relative z-10 text-center space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              LevaUp: A Nova Era da
-              <span className="text-primary block">Mobilidade Urbana</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Em breve: A Mobilidade que Você Merece em Paraíso!
-            </p>
-          </div>
+      <HeroSection
+        badge="🚀 Lançamento em breve em Paraíso/TO"
+        title="A Nova Era da Mobilidade Urbana"
+        subtitle="Comissões justas para motoristas. Preços honestos para passageiros. Suporte local que realmente funciona."
+        primaryCta={{
+          text: "Sou Passageiro",
+          href: "/passageiro"
+        }}
+        secondaryCta={{
+          text: "Sou Motorista",
+          href: "/motorista"
+        }}
+      />
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="text-lg px-8 py-6">
-              <Link href="/passageiro">Pronto para Mudar Sua Rotina?</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
-              <Link href="/motorista">Quero Acelerar Meus Lucros!</Link>
-            </Button>
-          </div>
+      <StatsSection 
+        stats={stats}
+        title="LevaUp em Números"
+        description="Veja por que somos diferentes"
+      />
 
-          <div className="max-w-2xl mx-auto">
-            <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="LevaUp App Interface"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
+      <FeaturesSection
+        title="Por Que Escolher o LevaUp?"
+        description="Tecnologia de ponta com transparência e justiça para todos"
+        features={features}
+      />
 
-      {/* Apresentação com Suspense */}
-      <section className="py-16 bg-muted/30">
-        <div className="container text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Uma Transformação Está Chegando</h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Paraíso do Tocantins está prestes a vivenciar uma transformação na forma de se mover. Uma plataforma pensada
-            para quem busca <strong>justiça</strong>, <strong>segurança</strong> e <strong>eficiência</strong>.
-          </p>
-        </div>
-      </section>
+      <ComparisonSection
+        title="Veja a Diferença no Seu Bolso"
+        description="Comparação real com outros aplicativos de mobilidade"
+        items={comparisonItems}
+      />
 
-      {/* Diferenciais */}
-      <section className="py-16">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Por Que o LevaUp é Diferente?</h2>
-            <p className="text-lg text-muted-foreground">Conheça os pilares que fazem do LevaUp a escolha certa</p>
-          </div>
+      <TestimonialsSection
+        title="O Que Nossos Usuários Dizem"
+        description="Experiências reais de quem já usa o LevaUp"
+        testimonials={testimonials}
+      />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <MapPin className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Precisão</h3>
-                <p className="text-muted-foreground">Geolocalização precisa para corridas sem erro</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <DollarSign className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Lucro Justo</h3>
-                <p className="text-muted-foreground">Comissões baixas e transparência total</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Headphones className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Suporte Local</h3>
-                <p className="text-muted-foreground">Atendimento presencial em Paraíso</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Shield className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Segurança</h3>
-                <p className="text-muted-foreground">Tecnologia avançada para sua proteção</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Lead Capture */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container text-center space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Fique por Dentro</h2>
-            <p className="text-lg opacity-90 max-w-2xl mx-auto">
-              Seja o primeiro a saber das novidades e ganhe bônus de lançamento! Cadastre seu e-mail e concorra a
-              prêmios exclusivos.
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto">
-            <form className="flex gap-2">
-              <Input type="email" placeholder="Seu melhor e-mail" className="bg-background text-foreground" />
-              <Button type="submit" variant="secondary">
-                Cadastrar
-              </Button>
-            </form>
-            <p className="text-sm opacity-75 mt-2">🎁 Ganhe 200 pontos Rewards na primeira corrida!</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Estatísticas */}
-      <section className="py-16">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">10%</div>
-              <p className="text-muted-foreground">Comissão para motoristas</p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">200</div>
-              <p className="text-muted-foreground">Pontos de bônus inicial</p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">24/7</div>
-              <p className="text-muted-foreground">Suporte disponível</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-16 bg-muted/30">
-        <div className="container text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Pronto para Fazer Parte da Revolução?</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Junte-se ao LevaUp e experimente uma nova forma de se mover em Paraíso do Tocantins.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg">
-              <Link href="/passageiro">Sou Passageiro</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/motorista">Sou Motorista</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Pronto para Fazer Parte da Revolução?"
+        description="Cadastre seu e-mail e seja o primeiro a saber quando lançarmos. Ganhe bônus exclusivos!"
+        variant="newsletter"
+      />
     </div>
   )
 }
+

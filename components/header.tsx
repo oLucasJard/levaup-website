@@ -1,9 +1,10 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Car } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,9 +12,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <Car className="h-8 w-8 text-primary" />
-          <span className="text-2xl font-bold text-primary">LevaUp</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-preto.png"
+            alt="LevaUp"
+            width={120}
+            height={40}
+            priority
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -26,6 +33,9 @@ export function Header() {
           </Link>
           <Link href="/sobre" className="text-sm font-medium hover:text-primary transition-colors">
             Sobre Nós
+          </Link>
+          <Link href="/parceiros" className="text-sm font-medium hover:text-primary transition-colors">
+            Parceiros
           </Link>
           <Link href="/faq" className="text-sm font-medium hover:text-primary transition-colors">
             FAQ
@@ -45,7 +55,12 @@ export function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button 
+          className="md:hidden" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={isMenuOpen}
+        >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
@@ -76,6 +91,13 @@ export function Header() {
               Sobre Nós
             </Link>
             <Link
+              href="/parceiros"
+              className="block text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Parceiros
+            </Link>
+            <Link
               href="/faq"
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
@@ -90,11 +112,11 @@ export function Header() {
               Contato
             </Link>
             <div className="flex flex-col space-y-2 pt-4">
-              <Button asChild variant="outline" onClick={() => setIsMenuOpen(false)}>
-                <Link href="/passageiro">Sou Passageiro</Link>
+              <Button asChild variant="outline">
+                <Link href="/passageiro" onClick={() => setIsMenuOpen(false)}>Sou Passageiro</Link>
               </Button>
-              <Button asChild onClick={() => setIsMenuOpen(false)}>
-                <Link href="/motorista">Sou Motorista</Link>
+              <Button asChild>
+                <Link href="/motorista" onClick={() => setIsMenuOpen(false)}>Sou Motorista</Link>
               </Button>
             </div>
           </nav>

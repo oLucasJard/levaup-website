@@ -1,5 +1,31 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Termos de Serviço | LevaUp",
+  description: "Leia os Termos de Serviço do LevaUp. Condições de uso, responsabilidades, política de cancelamento e direitos dos usuários. Última atualização: 2025.",
+  keywords: [
+    "termos de serviço LevaUp",
+    "condições de uso LevaUp",
+    "política LevaUp",
+    "termos motorista",
+    "termos passageiro"
+  ],
+  openGraph: {
+    title: "Termos de Serviço | LevaUp",
+    description: "Termos e condições de uso da plataforma LevaUp.",
+    url: "https://levaup.com.br/termos",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://levaup.com.br/termos",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+}
 
 export default function TermosPage() {
   return (
@@ -155,7 +181,7 @@ export default function TermosPage() {
               <div>
                 <h2 className="text-xl font-semibold mb-4">14. Contato</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Para dúvidas sobre estes termos, entre em contato conosco através do e-mail contato@levaup.com.br ou
+                  Para dúvidas sobre estes termos, entre em contato conosco através do e-mail contatolevaup@gmail.com ou
                   visite nossa página de contato.
                 </p>
               </div>
@@ -166,7 +192,7 @@ export default function TermosPage() {
                   <br />
                   Paraíso do Tocantins - TO
                   <br />
-                  E-mail: contato@levaup.com.br
+                  E-mail: contatolevaup@gmail.com
                   <br />
                   Site: levaup.com.br
                 </p>

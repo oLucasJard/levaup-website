@@ -1,0 +1,26 @@
+# robots.txt para LevaUp
+# https://levaup.com.br
+
+# Permitir todos os bots em todas as páginas
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://levaup.com.br/sitemap.xml
+
+# Bots específicos - configurações otimizadas
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1
+
