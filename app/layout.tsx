@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'LevaUp - Mobilidade Urbana em Paraíso do Tocantins',
     description: 'App de transporte com comissão de 10%. Motoristas ganham mais, passageiros pagam menos.',
-    images: ['/logo-preto.png'],
+    images: [{ url: '/logo-preto.png', width: 1200, height: 630, alt: 'LevaUp - App de Mobilidade Urbana' }],
   },
   robots: {
     index: true,
@@ -94,9 +94,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const jsonLd = {
+  const jsonLdOrganization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': 'https://levaup.com.br/#organization',
     name: 'LevaUp',
     legalName: 'BrandUp Hub',
     url: 'https://levaup.com.br',
@@ -116,12 +117,14 @@ export default function RootLayout({
     },
     contactPoint: {
       '@type': 'ContactPoint',
-        contactType: 'customer service',
-        email: 'contatolevaup@gmail.com',
-        availableLanguage: ['Portuguese']
+      contactType: 'customer service',
+      email: 'contato@levaup.com.br',
+      telephone: '+55-63-97601-1888',
+      availableLanguage: ['Portuguese'],
+      areaServed: 'BR',
     },
     sameAs: [
-      'https://www.instagram.com/levaup.to/',
+      'https://www.instagram.com/levaupbrasil/',
       'https://www.facebook.com/share/1Eud8vrfDK/'
     ],
     description: 'App de mobilidade urbana em Paraíso do Tocantins com comissão de apenas 10% para motoristas e preços justos para passageiros.',
@@ -141,8 +144,18 @@ export default function RootLayout({
     }
   }
 
+  const jsonLdWebSite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'LevaUp',
+    url: 'https://levaup.com.br',
+    description: 'App de mobilidade urbana em Paraíso do Tocantins. Comissão de 10% para motoristas, preços justos para passageiros.',
+    inLanguage: 'pt-BR',
+    publisher: { '@id': 'https://levaup.com.br/#organization' },
+  }
+
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
@@ -157,10 +170,17 @@ export default function RootLayout({
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link rel="canonical" href="https://levaup.com.br" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrganization) }}
+          suppressHydrationWarning
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
+          suppressHydrationWarning
         />
       </head>
       <body className={inter.className} suppressHydrationWarning>

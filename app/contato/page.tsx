@@ -12,14 +12,14 @@ export default function ContatoPage() {
   return (
     <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
+        <section className="py-16 bg-muted/40">
         <div className="container text-center space-y-8">
           <Badge variant="secondary" className="w-fit mx-auto">
             Contato
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Fale
-            <span className="text-primary block">Conosco</span>
+            <span className="text-levaup-orange block">Conosco</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Estamos aqui para ajudar! Entre em contato conosco através dos nossos canais oficiais
@@ -33,18 +33,28 @@ export default function ContatoPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="space-y-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
-                  <Mail className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 bg-levaup-orange/10 rounded-lg flex items-center justify-center mx-auto">
+                  <Mail className="h-6 w-6 text-levaup-orange" />
                 </div>
                 <h3 className="font-semibold">E-mail Geral</h3>
-                <p className="text-sm text-muted-foreground">contatolevaup@gmail.com</p>
+                <p className="text-sm text-muted-foreground">contato@levaup.com.br</p>
               </CardContent>
             </Card>
 
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="space-y-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto">
-                  <MessageCircle className="h-6 w-6 text-green-600" />
+                <div className="w-12 h-12 bg-levaup-green/20 rounded-lg flex items-center justify-center mx-auto">
+                  <Phone className="h-6 w-6 text-levaup-green" />
+                </div>
+                <h3 className="font-semibold">Telefone / WhatsApp</h3>
+                <a href="tel:+5563976011888" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">(63) 9 7601-1888</a>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="space-y-4">
+                <div className="w-12 h-12 bg-levaup-green/20 rounded-lg flex items-center justify-center mx-auto">
+                  <MessageCircle className="h-6 w-6 text-levaup-green" />
                 </div>
                 <h3 className="font-semibold">Motoristas</h3>
                 <p className="text-sm text-muted-foreground">motoristas@levaup.com.br</p>
@@ -67,7 +77,10 @@ export default function ContatoPage() {
                   <MessageCircle className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="font-semibold">Imprensa & Parcerias</h3>
-                <p className="text-sm text-muted-foreground">imprensa@levaup.com.br</p>
+                <p className="text-sm text-muted-foreground mb-2">imprensa@levaup.com.br</p>
+                <a href="https://www.parceiros.levaup.com.br" target="_blank" rel="noopener noreferrer" className="text-sm text-levaup-orange hover:underline font-medium">
+                  Parceiros empresariais e investidores →
+                </a>
               </CardContent>
             </Card>
           </div>
@@ -115,7 +128,7 @@ export default function ContatoPage() {
               <Card className="p-6">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <MapPin className="h-5 w-5 text-primary" />
+                    <MapPin className="h-5 w-5 text-levaup-orange" />
                     <span>Localização</span>
                   </CardTitle>
                 </CardHeader>
@@ -131,7 +144,7 @@ export default function ContatoPage() {
               <Card className="p-6">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <Phone className="h-5 w-5 text-primary" />
+                    <Phone className="h-5 w-5 text-levaup-orange" />
                     <span>Telefone</span>
                   </CardTitle>
                 </CardHeader>
@@ -156,7 +169,7 @@ export default function ContatoPage() {
                     <p>Segunda a Sexta: 8h às 18h</p>
                     <p>Sábado: 8h às 12h</p>
                     <p>Domingo: Fechado</p>
-                    <p className="text-sm text-primary">*Suporte de emergência 24h através do app</p>
+                    <p className="text-sm text-levaup-orange">*Suporte de emergência 24h através do app</p>
                   </div>
                 </CardContent>
               </Card>
@@ -175,7 +188,7 @@ export default function ContatoPage() {
                       className="flex items-center space-x-2 bg-transparent"
                     >
                       <Link 
-                        href="https://www.instagram.com/levaup.to/" 
+                        href="https://www.instagram.com/levaupbrasil/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
@@ -271,7 +284,7 @@ export default function ContatoPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-16 bg-levaup-orange text-levaup-white">
         <div className="container text-center space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold">Ainda tem Dúvidas?</h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
@@ -284,7 +297,7 @@ export default function ContatoPage() {
             <Button
               variant="outline"
               size="lg"
-              className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+              className="text-levaup-white border-levaup-white hover:bg-levaup-white hover:text-levaup-orange bg-transparent"
             >
               Ver FAQ Completo
             </Button>

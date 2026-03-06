@@ -31,14 +31,14 @@ export default function TermosPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
+      <section className="py-16 bg-muted/40">
         <div className="container text-center space-y-8">
           <Badge variant="secondary" className="w-fit mx-auto">
             Termos de Serviço
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Termos de
-            <span className="text-primary block">Serviço</span>
+            <span className="text-levaup-orange block">Serviço</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Leia nossos termos de serviço para entender como funciona nossa plataforma e seus direitos como usuário
@@ -181,7 +181,7 @@ export default function TermosPage() {
               <div>
                 <h2 className="text-xl font-semibold mb-4">14. Contato</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Para dúvidas sobre estes termos, entre em contato conosco através do e-mail contatolevaup@gmail.com ou
+                  Para dúvidas sobre estes termos, entre em contato conosco através do e-mail contato@levaup.com.br ou
                   visite nossa página de contato.
                 </p>
               </div>
@@ -192,7 +192,7 @@ export default function TermosPage() {
                   <br />
                   Paraíso do Tocantins - TO
                   <br />
-                  E-mail: contatolevaup@gmail.com
+                  E-mail: contato@levaup.com.br
                   <br />
                   Site: levaup.com.br
                 </p>

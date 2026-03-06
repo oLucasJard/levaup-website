@@ -31,14 +31,14 @@ export default function PrivacidadePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
+      <section className="py-16 bg-muted/40">
         <div className="container text-center space-y-8">
           <Badge variant="secondary" className="w-fit mx-auto">
             Política de Privacidade
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Política de
-            <span className="text-primary block">Privacidade</span>
+            <span className="text-levaup-orange block">Privacidade</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Entenda como coletamos, usamos e protegemos suas informações pessoais
@@ -234,8 +234,6 @@ export default function PrivacidadePage() {
                   contato conosco:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li>E-mail: privacidade@levaup.com.br</li>
-                  <li>E-mail do DPO: dpo@levaup.com.br</li>
                   <li>Formulário de contato em nosso site</li>
                   <li>Ponto de apoio em Paraíso do Tocantins (endereço a ser divulgado)</li>
                 </ul>
@@ -245,11 +243,9 @@ export default function PrivacidadePage() {
                 <p className="text-sm text-muted-foreground">
                   <strong>BrandUp Hub</strong>
                   <br />
-                  CNPJ: [A ser definido]
-                  <br />
                   Paraíso do Tocantins - TO
                   <br />
-                  E-mail: contatolevaup@gmail.com
+                  E-mail: contato@levaup.com.br
                   <br />
                   Site: levaup.com.br
                 </p>

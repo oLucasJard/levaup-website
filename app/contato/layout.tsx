@@ -37,7 +37,7 @@ export default function ContatoLayout({
     '@id': 'https://levaup.com.br',
     url: 'https://levaup.com.br',
     telephone: 'Em breve',
-    email: 'contatolevaup@gmail.com',
+    email: 'contato@levaup.com.br',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Endereço em breve',
@@ -66,7 +66,7 @@ export default function ContatoLayout({
       }
     ],
     sameAs: [
-      'https://www.instagram.com/levaup.to/',
+      'https://www.instagram.com/levaupbrasil/',
       'https://www.facebook.com/share/1Eud8vrfDK/'
     ]
   }

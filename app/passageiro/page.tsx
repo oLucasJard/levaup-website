@@ -1,352 +1,202 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
+import { Input } from "@/components/ui/input"
 import { SEOBreadcrumb } from "@/components/seo-breadcrumb"
 import {
   MapPin,
-  DollarSign,
-  Gift,
-  Car,
-  Bike,
   Shield,
-  Share2,
   AlertTriangle,
-  Star,
-  Clock,
   CheckCircle,
+  X,
+  Smartphone,
 } from "lucide-react"
 
 export default function PassageiroPage() {
   return (
     <>
       <SEOBreadcrumb items={[
-        { name: 'Home', url: '/' },
-        { name: 'Para Passageiros', url: '/passageiro' }
+        { name: "Home", url: "/" },
+        { name: "Para Passageiros", url: "/passageiro" },
       ]} />
       <div className="flex flex-col">
-        {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <Badge variant="secondary" className="w-fit">
-                Para Passageiros
+        {/* SEÇÃO 1: HERO - A PROMESSA DE CHEGADA */}
+        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-levaup-black">
+          <div className="container relative z-10 py-20">
+            <div className="max-w-3xl mx-auto text-center">
+              <Badge className="mb-6 bg-levaup-green/20 text-levaup-green border border-levaup-green/40">
+                LevaUp para Passageiros
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                LevaUp Passageiros:
-                <span className="text-primary block">Sua Corrida Perfeita Começa Aqui</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-levaup-white leading-tight">
+                Seu destino, sem a tela de
+                <span className="text-levaup-green block mt-2">
+                  &quot;Motorista Cancelou&quot;.
+                </span>
               </h1>
-              <p className="text-lg text-muted-foreground">
-                Chega de esperar na incerteza! Com o LevaUp, você tem localização precisa, preço justo e a segurança que
-                merece. Sua mobilidade nunca mais será a mesma.
+              <p className="mt-6 text-lg md:text-xl text-zinc-400 leading-relaxed">
+                Cansado de esperar 20 minutos por um carro que nunca chega? No LevaUp, nossos motoristas recebem a maior parte do valor da corrida. Quando o sistema é justo para eles, a viagem é rápida para você.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8">
-                  Faça seu Pré-Cadastro
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto h-14 px-8 bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-600"
+                  disabled
+                >
+                  <Smartphone className="h-5 w-5 mr-2" />
+                  Baixar na App Store
+                  <span className="block text-xs font-normal opacity-80 mt-0.5">Em breve</span>
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                  Baixe o App (Em Breve)
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto h-14 px-8 bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-600"
+                  disabled
+                >
+                  <Smartphone className="h-5 w-5 mr-2" />
+                  Disponível no Google Play
+                  <span className="block text-xs font-normal opacity-80 mt-0.5">Em breve</span>
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=500&width=400"
-                alt="LevaUp App para Passageiros"
-                width={400}
-                height={500}
-                className="mx-auto rounded-2xl shadow-2xl"
-              />
+          </div>
+        </section>
+
+        {/* SEÇÃO 2: A DOR VS. A SOLUÇÃO */}
+        <section className="py-16 md:py-24 bg-muted/40">
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              O fim do estresse na calçada.
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Card className="border-2 border-red-200 dark:border-red-800 bg-red-50/30 dark:bg-red-950/20">
+                <CardHeader>
+                  <div className="flex items-center gap-2">
+                    <X className="h-5 w-5 text-red-600" />
+                    <CardTitle className="text-red-700 dark:text-red-400">O Problema (Eles)</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  &quot;Motorista a caminho... Motorista finalizou a corrida... Motorista cancelou.&quot; Você já perdeu compromissos por causa disso. Sabe por que acontece? Porque o app gigante tentou ficar com 40% do valor, e a corrida parou de valer a pena para quem dirige.
+                </CardContent>
+              </Card>
+              <Card className="border-2 border-green-200 dark:border-green-800 bg-green-50/30 dark:bg-green-950/20 ring-2 ring-green-200 dark:ring-green-800">
+                <CardHeader>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <CardTitle className="text-green-700 dark:text-green-400">A Solução (LevaUp)</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  Nós resolvemos o problema na raiz. Cobramos apenas 10% de taxa da plataforma. Isso significa que toda corrida do LevaUp é uma corrida lucrativa para o motorista. Resultado? Eles aceitam seu pedido em segundos.
+                </CardContent>
+              </Card>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Problemas que Resolvemos */}
-      <section className="py-16 bg-muted/30">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Acabou a Dor de Cabeça com Transporte</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Identificamos os principais problemas e criamos soluções inteligentes
+        {/* SEÇÃO 3: TECNOLOGIA PARA SUA SEGURANÇA */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              Segurança não é opcional. É código-fonte.
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Recursos de segurança arquitetados no aplicativo, não como afterthought.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <Card className="border-2 hover:border-levaup-orange/30 transition-colors">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-xl bg-levaup-orange/10 flex items-center justify-center mb-2">
+                    <Shield className="h-6 w-6 text-levaup-orange" />
+                  </div>
+                  <CardTitle className="text-lg">Motoristas Verificados Localmente</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed text-sm">
+                  Não somos um robô aprovando cadastros no automático. Nossa base é em Paraíso. Conhecemos nossos parceiros, verificamos antecedentes e mantemos um padrão de excelência.
+                </CardContent>
+              </Card>
+              <Card className="border-2 hover:border-levaup-orange/30 transition-colors">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-xl bg-levaup-orange/10 flex items-center justify-center mb-2">
+                    <MapPin className="h-6 w-6 text-levaup-orange" />
+                  </div>
+                  <CardTitle className="text-lg">Rastreamento em Tempo Real</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed text-sm">
+                  Compartilhe sua rota via WhatsApp com um clique. Nossos servidores mantêm a localização exata do veículo atualizada a cada milissegundo.
+                </CardContent>
+              </Card>
+              <Card className="border-2 hover:border-levaup-orange/30 transition-colors">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-xl bg-levaup-orange/10 flex items-center justify-center mb-2">
+                    <AlertTriangle className="h-6 w-6 text-levaup-orange" />
+                  </div>
+                  <CardTitle className="text-lg">Botão de Pânico Inteligente</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed text-sm">
+                  Conectado diretamente à nossa central de suporte local. Se algo sair do planejado, nós agimos na hora, não 3 dias depois por e-mail.
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* SEÇÃO 4: PREÇO JUSTO E TRANSPARENTE */}
+        <section className="py-16 md:py-24 bg-muted/40">
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+              Você paga o justo. A cidade enriquece.
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto mb-10">
+              Usar o LevaUp é um ato de inteligência econômica. O preço que você paga na tela é o preço final. Sem tarifas dinâmicas abusivas que triplicam o valor quando chove. Além disso, o dinheiro da sua corrida fica em Paraíso do Tocantins, circulando no comércio local, em vez de ser enviado para a Califórnia.
             </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="text-center p-6">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto">
-                  <Clock className="h-8 w-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-red-600">Problema</h3>
-                <p className="text-muted-foreground">Espera longa sem saber onde está o motorista</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto">
-                  <MapPin className="h-8 w-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-red-600">Problema</h3>
-                <p className="text-muted-foreground">Erro de localização e motorista perdido</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto">
-                  <DollarSign className="h-8 w-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-red-600">Problema</h3>
-                <p className="text-muted-foreground">Preços abusivos e taxas escondidas</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefícios do LevaUp */}
-      <section className="py-16">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Como o LevaUp Resolve Tudo Isso</h2>
-            <p className="text-lg text-muted-foreground">Tecnologia de ponta para uma experiência superior</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Geolocalização Precisa</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Sistema GPS avançado que elimina erros de localização. Você sempre sabe exatamente onde está seu
-                  motorista.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <DollarSign className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Preço Justo e Transparente</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Sem surpresas! Preço calculado de forma justa, sem taxas escondidas ou aumentos abusivos.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Gift className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>LevaUp Rewards</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Ganhe 200 pontos na primeira corrida! Participe de sorteios semanais e acumule benefícios.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Car className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>LevaUp Carro</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Para quem prioriza conforto. Carros selecionados com ar-condicionado e espaço para bagagens.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Bike className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>LevaUp Moto</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Para quem tem pressa. Chegue mais rápido ao destino com nossas motos seguras e equipadas.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Shield className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Segurança Total</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Botão de pânico, compartilhamento de viagem em tempo real e motoristas verificados.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Recursos de Segurança */}
-      <section className="py-16 bg-muted/30">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">Sua Segurança é Nossa Prioridade</h2>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <AlertTriangle className="h-6 w-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-semibold">Botão de Pânico</h3>
-                    <p className="text-muted-foreground">Acione ajuda instantânea em situações de emergência</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Share2 className="h-6 w-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-semibold">Compartilhamento de Viagem</h3>
-                    <p className="text-muted-foreground">Seus familiares acompanham sua viagem em tempo real</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-semibold">Motoristas Verificados</h3>
-                    <p className="text-muted-foreground">Todos os motoristas passam por verificação rigorosa</p>
-                  </div>
-                </div>
-              </div>
+        {/* SEÇÃO 5: CTA FINAL */}
+        <section className="py-16 md:py-24 bg-levaup-orange text-levaup-white">
+          <div className="container max-w-2xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              A cidade está se movendo de um jeito novo. Você vem?
+            </h2>
+            <p className="text-lg opacity-95 mb-10">
+              Baixe o aplicativo, crie sua conta em 1 minuto e chame seu primeiro LevaUp.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="h-14 px-8 bg-levaup-white text-levaup-orange hover:bg-zinc-100"
+                disabled
+              >
+                Baixar na App Store
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 px-8 border-2 border-white text-white hover:bg-white/10"
+                disabled
+              >
+                Disponível no Google Play
+              </Button>
             </div>
-            <div>
-              <Image
-                src="/placeholder.svg?height=400&width=500"
-                alt="Recursos de Segurança"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-lg"
+            <p className="text-sm opacity-80 mb-8">App em breve. Cadastre-se para ser avisado no lançamento.</p>
+            <form className="max-w-md mx-auto flex gap-2" onSubmit={(e) => e.preventDefault()}>
+              <Input
+                type="email"
+                placeholder="Seu e-mail"
+                className="bg-white text-foreground border-0 h-12 flex-1"
+                required
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Depoimentos */}
-      <section className="py-16">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">O Que Nossos Usuários Dizem</h2>
-            <p className="text-lg text-muted-foreground">Experiências reais de quem já usa o LevaUp</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="p-6">
-              <CardContent className="space-y-4">
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground">
-                  "Finalmente um app que funciona de verdade! Nunca mais tive problema com localização."
-                </p>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold">M</span>
-                  </div>
-                  <span className="text-sm font-medium">Maria Silva</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardContent className="space-y-4">
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground">
-                  "Os preços são justos e o atendimento é excelente. Recomendo para todos!"
-                </p>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold">J</span>
-                  </div>
-                  <span className="text-sm font-medium">João Santos</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardContent className="space-y-4">
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground">
-                  "Me sinto muito mais segura usando o LevaUp. Os recursos de segurança são incríveis!"
-                </p>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold">A</span>
-                  </div>
-                  <span className="text-sm font-medium">Ana Costa</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Pronto para Sua Primeira Corrida?</h2>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Faça seu pré-cadastro agora e ganhe 200 pontos de bônus na primeira corrida!
-          </p>
-
-          <div className="max-w-md mx-auto space-y-4">
-            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-              <Input type="email" placeholder="Seu melhor e-mail" className="bg-background text-foreground" required />
-              <Button type="submit" variant="secondary">
-                Cadastrar
+              <Button type="submit" variant="secondary" className="bg-levaup-white text-levaup-orange hover:bg-zinc-100 h-12 px-6">
+                Avise-me
               </Button>
             </form>
-            <p className="text-sm opacity-75">🎁 Ganhe 200 pontos Rewards + participação em sorteios semanais</p>
           </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Button variant="secondary" size="lg">
-              Baixar na Google Play (Em Breve)
-            </Button>
-            <Button variant="secondary" size="lg">
-              Baixar na App Store (Em Breve)
-            </Button>
-          </div>
-        </div>
-      </section>
+        </section>
       </div>
     </>
   )

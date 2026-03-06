@@ -60,19 +60,13 @@ export function CTASection({
     }
   }
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-400/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-700/30 rounded-full blur-3xl animate-pulse delay-1000" />
-      </div>
-      
+    <section className="py-20 bg-levaup-orange text-levaup-white relative overflow-hidden">
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
             {title}
           </h2>
-          <p className="text-xl md:text-2xl text-orange-50 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-levaup-white/90 leading-relaxed max-w-3xl mx-auto">
             {description}
           </p>
           
@@ -109,7 +103,7 @@ export function CTASection({
               {message && (
                 <div className={`mt-4 p-3 rounded-lg flex items-center justify-center gap-2 ${
                   message.type === "success" 
-                    ? "bg-green-500/20 text-green-100 border border-green-400/50" 
+                    ? "bg-levaup-green/20 text-levaup-white border border-levaup-green/50" 
                     : "bg-red-500/20 text-red-100 border border-red-400/50"
                 }`}>
                   {message.type === "success" && <CheckCircle2 className="h-5 w-5" />}
@@ -119,7 +113,7 @@ export function CTASection({
               
               {!message && (
                 <p className="text-sm text-orange-100 mt-4">
-                  🎁 Ganhe 200 pontos de bônus ao se cadastrar
+                  Seja o primeiro a saber quando lançarmos.
                 </p>
               )}
             </div>
@@ -140,7 +134,7 @@ export function CTASection({
                   asChild 
                   size="lg" 
                   variant="outline"
-                  className="h-14 px-10 text-lg font-semibold border-2 border-white text-white hover:bg-white hover:text-orange-600"
+                  className="h-14 px-10 text-lg font-semibold border-2 border-levaup-white text-levaup-white hover:bg-levaup-white hover:text-levaup-orange"
                 >
                   <Link href={secondaryButton.href}>{secondaryButton.text}</Link>
                 </Button>

@@ -25,8 +25,8 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "var(--levaup-orange)",
+          foreground: "var(--levaup-white)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -52,6 +52,12 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        /* Design system LevaUp: apenas verde vivo, laranja, branco, preto, azul petróleo */
+        "levaup-orange": "var(--levaup-orange)",
+        "levaup-green": "var(--levaup-green)",
+        "levaup-white": "var(--levaup-white)",
+        "levaup-black": "var(--levaup-black)",
+        "levaup-petrol": "var(--levaup-petrol)",
       },
       borderRadius: {
         lg: "var(--radius)",

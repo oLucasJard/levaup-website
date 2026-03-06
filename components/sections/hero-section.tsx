@@ -13,8 +13,6 @@ interface HeroSectionProps {
     text: string
     href: string
   }
-  imageSrc?: string
-  imageAlt?: string
 }
 
 export function HeroSection({
@@ -23,8 +21,6 @@ export function HeroSection({
   subtitle,
   primaryCta,
   secondaryCta,
-  imageSrc = "/placeholder.svg?height=500&width=600",
-  imageAlt = "Hero image",
 }: HeroSectionProps) {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -35,7 +31,9 @@ export function HeroSection({
           loop
           muted
           playsInline
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden
         >
           <source src="/logo-animation.mp4" type="video/mp4" />
         </video>

@@ -10,7 +10,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-levaup-white">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
@@ -25,24 +25,27 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/passageiro" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/passageiro" className="text-sm font-medium hover:text-levaup-orange transition-colors">
             Para Passageiros
           </Link>
-          <Link href="/motorista" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/motorista" className="text-sm font-medium hover:text-levaup-orange transition-colors">
             Para Motoristas
           </Link>
-          <Link href="/sobre" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/sobre" className="text-sm font-medium hover:text-levaup-orange transition-colors">
             Sobre Nós
           </Link>
-          <Link href="/parceiros" className="text-sm font-medium hover:text-primary transition-colors">
-            Parceiros
+          <Link href="/financeiro" className="text-sm font-medium hover:text-levaup-orange transition-colors">
+            Financeiro
           </Link>
-          <Link href="/faq" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/faq" className="text-sm font-medium hover:text-levaup-orange transition-colors">
             FAQ
           </Link>
-          <Link href="/contato" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/contato" className="text-sm font-medium hover:text-levaup-orange transition-colors">
             Contato
           </Link>
+          <a href="https://www.parceiros.levaup.com.br" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-levaup-orange transition-colors">
+            Parceiros & Investidores
+          </a>
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
@@ -59,7 +62,7 @@ export function Header() {
           className="md:hidden" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={isMenuOpen}
+          aria-expanded={isMenuOpen ? "true" : "false"}
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -67,50 +70,59 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden border-t bg-background">
+        <div className="md:hidden border-t bg-levaup-white">
           <nav className="container py-4 space-y-4">
             <Link
               href="/passageiro"
-              className="block text-sm font-medium hover:text-primary transition-colors"
+              className="block text-sm font-medium hover:text-levaup-orange transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Para Passageiros
             </Link>
             <Link
               href="/motorista"
-              className="block text-sm font-medium hover:text-primary transition-colors"
+              className="block text-sm font-medium hover:text-levaup-orange transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Para Motoristas
             </Link>
             <Link
               href="/sobre"
-              className="block text-sm font-medium hover:text-primary transition-colors"
+              className="block text-sm font-medium hover:text-levaup-orange transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Sobre Nós
             </Link>
             <Link
-              href="/parceiros"
-              className="block text-sm font-medium hover:text-primary transition-colors"
+              href="/financeiro"
+              className="block text-sm font-medium hover:text-levaup-orange transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Parceiros
+              Financeiro
             </Link>
             <Link
               href="/faq"
-              className="block text-sm font-medium hover:text-primary transition-colors"
+              className="block text-sm font-medium hover:text-levaup-orange transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               FAQ
             </Link>
             <Link
               href="/contato"
-              className="block text-sm font-medium hover:text-primary transition-colors"
+              className="block text-sm font-medium hover:text-levaup-orange transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contato
             </Link>
+            <a
+              href="https://www.parceiros.levaup.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-sm font-medium hover:text-levaup-orange transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Parceiros & Investidores
+            </a>
             <div className="flex flex-col space-y-2 pt-4">
               <Button asChild variant="outline">
                 <Link href="/passageiro" onClick={() => setIsMenuOpen(false)}>Sou Passageiro</Link>

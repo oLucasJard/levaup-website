@@ -13,15 +13,12 @@ interface StatsSectionProps {
 
 export function StatsSection({ title, description, stats }: StatsSectionProps) {
   return (
-    <section className="py-20 bg-gradient-to-b from-orange-600 to-orange-700 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent_50%)]" />
-      
+    <section className="py-20 bg-levaup-orange text-levaup-white relative overflow-hidden">
       <div className="container relative z-10">
         {(title || description) && (
           <div className="text-center space-y-4 mb-16">
             {title && <h2 className="text-3xl md:text-4xl font-bold">{title}</h2>}
-            {description && <p className="text-lg text-orange-100 max-w-2xl mx-auto">{description}</p>}
+            {description && <p className="text-lg text-levaup-white/90 max-w-2xl mx-auto">{description}</p>}
           </div>
         )}
         
@@ -36,7 +33,7 @@ export function StatsSection({ title, description, stats }: StatsSectionProps) {
                 {stat.value}
                 {stat.suffix}
               </div>
-              <p className="text-lg text-orange-100 font-medium">{stat.label}</p>
+              <p className="text-lg text-levaup-white/90 font-medium">{stat.label}</p>
             </div>
           ))}
         </div>

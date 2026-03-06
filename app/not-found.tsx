@@ -6,12 +6,12 @@ import { Home, Search, ArrowLeft } from "lucide-react"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-white to-purple-50">
+    <div className="min-h-screen flex items-center justify-center bg-levaup-white">
       <div className="container px-4">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           {/* 404 Number */}
           <div className="relative">
-            <h1 className="text-[150px] md:text-[200px] font-bold text-orange-600/10 leading-none">
+            <h1 className="text-[150px] md:text-[200px] font-bold text-levaup-orange/20 leading-none">
               404
             </h1>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -54,35 +54,28 @@ export default function NotFound() {
             <div className="flex flex-wrap gap-3 justify-center">
               <Link 
                 href="/passageiro" 
-                className="text-sm text-primary hover:underline"
+                className="text-sm text-levaup-orange hover:underline"
               >
                 Para Passageiros
               </Link>
               <span className="text-muted-foreground">•</span>
               <Link 
                 href="/motorista" 
-                className="text-sm text-primary hover:underline"
+                className="text-sm text-levaup-orange hover:underline"
               >
                 Para Motoristas
               </Link>
               <span className="text-muted-foreground">•</span>
               <Link 
                 href="/precos" 
-                className="text-sm text-primary hover:underline"
+                className="text-sm text-levaup-orange hover:underline"
               >
                 Preços
               </Link>
               <span className="text-muted-foreground">•</span>
               <Link 
-                href="/parceiros" 
-                className="text-sm text-primary hover:underline"
-              >
-                Parceiros
-              </Link>
-              <span className="text-muted-foreground">•</span>
-              <Link 
                 href="/contato" 
-                className="text-sm text-primary hover:underline"
+                className="text-sm text-levaup-orange hover:underline"
               >
                 Contato
               </Link>
@@ -92,7 +85,7 @@ export default function NotFound() {
           {/* Back Button */}
           <button 
             onClick={() => window.history.back()}
-            className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2"
+            className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors inline-flex items-center gap-2"
           >
             <ArrowLeft className="h-4 w-4" />
             Voltar para página anterior

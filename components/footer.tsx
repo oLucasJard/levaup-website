@@ -28,24 +28,27 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Links Rápidos</h3>
             <nav className="flex flex-col space-y-2">
-              <Link href="/passageiro" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/passageiro" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
                 Para Passageiros
               </Link>
-              <Link href="/motorista" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/motorista" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
                 Para Motoristas
               </Link>
-              <Link href="/sobre" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/sobre" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
                 Sobre Nós
               </Link>
-              <Link href="/parceiros" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Parceiros
-              </Link>
-              <Link href="/precos" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/precos" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
                 Preços
               </Link>
-              <Link href="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/financeiro" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
+                Financeiro
+              </Link>
+              <Link href="/faq" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
                 FAQ
               </Link>
+              <a href="https://www.parceiros.levaup.com.br" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
+                Parceiros & Investidores
+              </a>
             </nav>
           </div>
 
@@ -53,14 +56,14 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Contato</h3>
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <a href="mailto:contato@levaup.com.br" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
               <Mail className="h-4 w-4" />
-              <span>contatolevaup@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <span>contato@levaup.com.br</span>
+              </a>
+              <a href="tel:+5563976011888" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>Em breve</span>
-              </div>
+                <span>(63) 9 7601-1888</span>
+              </a>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
                 <span>Paraíso do Tocantins</span>
@@ -73,10 +76,10 @@ export function Footer() {
             <h3 className="font-semibold">Siga-nos</h3>
             <div className="flex space-x-4">
               <Link 
-                href="https://www.instagram.com/levaup.to/" 
+                href="https://www.instagram.com/levaupbrasil/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-levaup-orange transition-colors"
                 aria-label="Instagram do LevaUp"
               >
                 <Instagram className="h-5 w-5" />
@@ -85,7 +88,7 @@ export function Footer() {
                 href="https://www.facebook.com/share/1Eud8vrfDK/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-levaup-orange transition-colors"
                 aria-label="Facebook do LevaUp"
               >
                 <Facebook className="h-5 w-5" />
@@ -99,10 +102,10 @@ export function Footer() {
             © {new Date().getFullYear()} LevaUp - BrandUp Hub. Todos os direitos reservados.
           </p>
           <nav className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/termos" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/termos" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
               Termos de Serviço
             </Link>
-            <Link href="/privacidade" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/privacidade" className="text-sm text-muted-foreground hover:text-levaup-orange transition-colors">
               Política de Privacidade
             </Link>
           </nav>

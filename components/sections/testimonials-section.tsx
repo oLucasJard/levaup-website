@@ -17,7 +17,7 @@ interface TestimonialsSectionProps {
 
 export function TestimonialsSection({ title, description, testimonials }: TestimonialsSectionProps) {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-muted/30">
       <div className="container">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{title}</h2>
@@ -38,7 +38,7 @@ export function TestimonialsSection({ title, description, testimonials }: Testim
                 {/* Rating */}
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-orange-500 text-orange-500" />
+                    <Star key={i} className="h-4 w-4 fill-levaup-orange text-levaup-orange" />
                   ))}
                 </div>
                 
@@ -49,7 +49,7 @@ export function TestimonialsSection({ title, description, testimonials }: Testim
                 
                 {/* Author */}
                 <div className="flex items-center gap-3 pt-4 border-t">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-12 h-12 bg-levaup-orange rounded-full flex items-center justify-center text-levaup-white font-bold text-lg">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>

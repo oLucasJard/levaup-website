@@ -29,14 +29,14 @@ export default function PrecosPage() {
       ]} />
       <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-green-50 to-background">
+        <section className="py-16 bg-muted/40">
           <div className="container text-center space-y-6">
-            <Badge variant="secondary" className="w-fit mx-auto bg-green-100 text-green-800">
+            <Badge variant="secondary" className="w-fit mx-auto bg-levaup-green/20 text-levaup-green">
               Política de Preços
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               💰 Política de
-              <span className="text-green-600 block">Preços</span>
+              <span className="text-levaup-green block">Preços</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Documento Oficial de Tarifação e Cobrança
@@ -69,29 +69,29 @@ export default function PrecosPage() {
 
               <h3 className="text-xl font-semibold mb-4">Princípios da Nossa Precificação:</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3 p-4 bg-green-50 rounded-lg">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-4 bg-levaup-green/10 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-levaup-green mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Transparência Total</p>
                     <p className="text-sm text-muted-foreground">Cliente vê o preço EXATO antes de confirmar</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-green-50 rounded-lg">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-4 bg-levaup-green/10 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-levaup-green mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Sem Surpresas</p>
                     <p className="text-sm text-muted-foreground">Preço fixo arredondado (não há variação após confirmação)</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-green-50 rounded-lg">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-4 bg-levaup-green/10 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-levaup-green mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Preço Justo</p>
                     <p className="text-sm text-muted-foreground">Baseado em distância real e tempo estimado</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-green-50 rounded-lg">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-4 bg-levaup-green/10 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-levaup-green mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Descontos Claros</p>
                     <p className="text-sm text-muted-foreground">Cupons aplicados mostram economia em destaque</p>
@@ -114,8 +114,8 @@ export default function PrecosPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <Card className="text-center p-6">
                   <CardContent className="space-y-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                      <DollarSign className="h-8 w-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-levaup-petrol/20 rounded-full flex items-center justify-center mx-auto">
+                      <DollarSign className="h-8 w-8 text-levaup-petrol" />
                     </div>
                     <h3 className="font-semibold text-lg">1. Tarifa Base</h3>
                     <p className="text-sm text-muted-foreground">
@@ -126,8 +126,8 @@ export default function PrecosPage() {
 
                 <Card className="text-center p-6">
                   <CardContent className="space-y-4">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                      <MapPin className="h-8 w-8 text-green-600" />
+                    <div className="w-16 h-16 bg-levaup-green/20 rounded-full flex items-center justify-center mx-auto">
+                      <MapPin className="h-8 w-8 text-levaup-green" />
                     </div>
                     <h3 className="font-semibold text-lg">2. Custo por Distância</h3>
                     <p className="text-sm text-muted-foreground">
@@ -149,9 +149,9 @@ export default function PrecosPage() {
                 </Card>
               </div>
 
-              <Alert className="bg-blue-50 border-blue-200">
-                <AlertCircle className="h-4 w-4 text-blue-600" />
-                <AlertDescription className="text-blue-900">
+              <Alert className="bg-levaup-petrol/10 border-levaup-petrol/30">
+                <AlertCircle className="h-4 w-4 text-levaup-petrol" />
+                <AlertDescription className="text-levaup-petrol">
                   <p className="font-semibold mb-2">Fórmula de Cálculo:</p>
                   <code className="text-sm bg-white px-3 py-2 rounded block">
                     Preço Base = Tarifa Base + (Distância × Tarifa/km) + (Tempo × Tarifa/min)
@@ -204,19 +204,19 @@ export default function PrecosPage() {
 
                     <div className="mt-6 space-y-2 text-sm text-muted-foreground">
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Mais rápido em trânsito
                       </p>
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Ideal para distâncias curtas (até 10km)
                       </p>
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Tempo de espera: média 3 minutos
                       </p>
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Capacidade: 1 passageiro + bagagem pequena
                       </p>
                     </div>
@@ -224,53 +224,53 @@ export default function PrecosPage() {
                 </Card>
 
                 {/* Carro */}
-                <Card className="border-blue-200">
-                  <CardHeader className="bg-blue-50">
+                <Card className="border-levaup-petrol/30">
+                  <CardHeader className="bg-levaup-petrol/10">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <div className="w-12 h-12 bg-levaup-petrol rounded-lg flex items-center justify-center">
                           <Car className="h-6 w-6 text-white" />
                         </div>
                         <CardTitle className="text-2xl">CARRO 🚙</CardTitle>
                       </div>
-                      <Badge className="bg-blue-600">Mais conforto</Badge>
+                      <Badge className="bg-levaup-petrol">Mais conforto</Badge>
                     </div>
                   </CardHeader>
                   <CardContent className="pt-6">
                     <div className="space-y-4">
                       <div className="flex justify-between items-center border-b pb-3">
                         <span className="font-semibold">Bandeirada</span>
-                        <span className="text-xl font-bold text-blue-600">R$ 3,00</span>
+                        <span className="text-xl font-bold text-levaup-petrol">R$ 3,00</span>
                       </div>
                       <div className="flex justify-between items-center border-b pb-3">
                         <span className="font-semibold">Por Quilômetro</span>
-                        <span className="text-xl font-bold text-blue-600">R$ 1,40</span>
+                        <span className="text-xl font-bold text-levaup-petrol">R$ 1,40</span>
                       </div>
                       <div className="flex justify-between items-center border-b pb-3">
                         <span className="font-semibold">Por Minuto</span>
-                        <span className="text-xl font-bold text-blue-600">R$ 0,25</span>
+                        <span className="text-xl font-bold text-levaup-petrol">R$ 0,25</span>
                       </div>
-                      <div className="flex justify-between items-center bg-blue-100 p-3 rounded-lg">
+                      <div className="flex justify-between items-center bg-levaup-petrol/20 p-3 rounded-lg">
                         <span className="font-bold">Valor Mínimo</span>
-                        <span className="text-xl font-bold text-blue-600">R$ 8,00</span>
+                        <span className="text-xl font-bold text-levaup-petrol">R$ 8,00</span>
                       </div>
                     </div>
 
                     <div className="mt-6 space-y-2 text-sm text-muted-foreground">
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Mais confortável e seguro
                       </p>
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Ideal para distâncias médias/longas (5-50km)
                       </p>
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Tempo de espera: média 5 minutos
                       </p>
                       <p className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-levaup-green" />
                         Capacidade: Até 4 passageiros + mala grande
                       </p>
                     </div>
@@ -375,19 +375,19 @@ export default function PrecosPage() {
         <section className="py-16">
           <div className="container">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8">🎁 Sistema de Cupons e Descontos</h2>
+              <h2 className="text-3xl font-bold mb-8">Sistema de Cupons e Descontos</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <Card className="border-green-200">
-                  <CardHeader className="bg-green-50">
+                <Card className="border-levaup-green/30">
+                  <CardHeader className="bg-levaup-green/10">
                     <div className="flex items-center gap-3">
-                      <Tag className="h-5 w-5 text-green-600" />
+                      <Tag className="h-5 w-5 text-levaup-green" />
                       <CardTitle>Cupom de Valor Fixo</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="pt-6">
-                    <div className="bg-green-100 p-4 rounded-lg mb-4">
-                      <p className="font-bold text-green-800 mb-2">Exemplo: PRIMEIRA</p>
+                    <div className="bg-levaup-green/20 p-4 rounded-lg mb-4">
+                      <p className="font-bold text-levaup-green mb-2">Exemplo: PRIMEIRA</p>
                       <ul className="text-sm space-y-1">
                         <li>Desconto: <strong>R$ 2,00</strong></li>
                         <li>Válido para: Primeira corrida</li>
@@ -424,12 +424,12 @@ export default function PrecosPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
+                <div className="bg-levaup-green/10 p-6 rounded-lg">
+                  <h3 className="font-semibold text-levaup-green mb-3 flex items-center gap-2">
                     <CheckCircle className="h-5 w-5" />
                     ✅ Permitido
                   </h3>
-                  <ul className="text-sm space-y-2 text-green-900">
+                  <ul className="text-sm space-y-2 text-levaup-green">
                     <li>• 1 cupom por corrida</li>
                     <li>• Cupom pode ser removido antes de confirmar</li>
                     <li>• Desconto aparece em verde no card</li>
@@ -469,10 +469,10 @@ export default function PrecosPage() {
                     <CardTitle>Carteira LevaUp</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Badge className="mb-3 bg-green-100 text-green-800">Recomendado</Badge>
+                    <Badge className="mb-3 bg-levaup-green/20 text-levaup-green">Recomendado</Badge>
                     <ul className="text-sm space-y-2 text-muted-foreground">
                       <li>⚡ Pagamento instantâneo</li>
-                      <li>🎁 Bônus em recargas</li>
+                      <li>Vantagens em recargas</li>
                       <li>💰 Sem taxas</li>
                     </ul>
                   </CardContent>
@@ -480,8 +480,8 @@ export default function PrecosPage() {
 
                 <Card>
                   <CardHeader>
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                      <CreditCard className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-levaup-petrol/20 rounded-lg flex items-center justify-center mb-2">
+                      <CreditCard className="h-6 w-6 text-levaup-petrol" />
                     </div>
                     <CardTitle>Cartão Crédito/Débito</CardTitle>
                   </CardHeader>
@@ -499,8 +499,8 @@ export default function PrecosPage() {
 
                 <Card>
                   <CardHeader>
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-2">
-                      <Smartphone className="h-6 w-6 text-green-600" />
+                    <div className="w-12 h-12 bg-levaup-green/20 rounded-lg flex items-center justify-center mb-2">
+                      <Smartphone className="h-6 w-6 text-levaup-green" />
                     </div>
                     <CardTitle>PIX</CardTitle>
                   </CardHeader>
@@ -577,8 +577,8 @@ export default function PrecosPage() {
                 </Card>
 
                 {/* Exemplo 2 */}
-                <Card className="border-blue-200">
-                  <CardHeader className="bg-blue-50">
+                <Card className="border-levaup-petrol/30">
+                  <CardHeader className="bg-levaup-petrol/10">
                     <CardTitle>Exemplo 2: Corrida Média de Carro (Horário de Pico)</CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
@@ -603,7 +603,7 @@ export default function PrecosPage() {
                         <p>Subtotal: <span className="float-right">R$ 24,72</span></p>
                         <p>Multiplicador: <span className="float-right text-orange-600">1.2×</span></p>
                         <hr className="my-3 border-dashed" />
-                        <p className="font-bold text-lg text-blue-600">
+                        <p className="font-bold text-lg text-levaup-petrol">
                           Total: <span className="float-right">R$ 29,50</span>
                         </p>
                       </div>
@@ -612,8 +612,8 @@ export default function PrecosPage() {
                 </Card>
 
                 {/* Exemplo 3 */}
-                <Card className="border-green-200">
-                  <CardHeader className="bg-green-50">
+                <Card className="border-levaup-green/30">
+                  <CardHeader className="bg-levaup-green/10">
                     <CardTitle>Exemplo 3: Corrida Noturna com Cupom</CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
@@ -633,13 +633,13 @@ export default function PrecosPage() {
                         <p>Multiplicador: <span className="float-right text-indigo-600">1.3×</span></p>
                         <p>Total: <span className="float-right">R$ 14,00</span></p>
                         <hr className="my-3 border-dashed" />
-                        <p className="text-green-600">Desconto (20%): <span className="float-right">-R$ 2,80</span></p>
+                        <p className="text-levaup-green">Desconto (20%): <span className="float-right">-R$ 2,80</span></p>
                         <hr className="my-3 border-dashed" />
                         <p className="line-through text-gray-400">R$ 14,00</p>
-                        <p className="font-bold text-lg text-green-600">
+                        <p className="font-bold text-lg text-levaup-green">
                           Final: <span className="float-right">R$ 11,00</span>
                         </p>
-                        <p className="text-green-600 text-xs mt-2">💚 Economia: R$ 3,00</p>
+                        <p className="text-levaup-green text-xs mt-2">💚 Economia: R$ 3,00</p>
                       </div>
                     </div>
                   </CardContent>
@@ -661,8 +661,8 @@ export default function PrecosPage() {
                     <CardTitle>Cancelamento pelo Passageiro</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="bg-green-50 p-4 rounded-lg">
-                      <p className="font-semibold text-green-800 mb-2 flex items-center gap-2">
+                    <div className="bg-levaup-green/10 p-4 rounded-lg">
+                      <p className="font-semibold text-levaup-green mb-2 flex items-center gap-2">
                         <CheckCircle className="h-5 w-5" />
                         ✅ Reembolso Total (100%)
                       </p>
@@ -697,9 +697,9 @@ export default function PrecosPage() {
                   </CardContent>
                 </Card>
 
-                <Alert className="bg-blue-50 border-blue-200">
-                  <RefreshCw className="h-4 w-4 text-blue-600" />
-                  <AlertDescription className="text-blue-900">
+                <Alert className="bg-levaup-petrol/10 border-levaup-petrol/30">
+                  <RefreshCw className="h-4 w-4 text-levaup-petrol" />
+                  <AlertDescription className="text-levaup-petrol">
                     <p className="font-semibold mb-2">Como Solicitar Reembolso:</p>
                     <ol className="text-sm space-y-1 ml-4 list-decimal">
                       <li>Acesse <strong>Minha Conta</strong> → <strong>Corridas</strong></li>
@@ -740,11 +740,11 @@ export default function PrecosPage() {
 
                 <Card className="text-center p-6">
                   <CardContent className="space-y-3">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                      <MapPin className="h-8 w-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-levaup-petrol/20 rounded-full flex items-center justify-center mx-auto">
+                      <MapPin className="h-8 w-8 text-levaup-petrol" />
                     </div>
                     <h3 className="font-semibold">Área de Operação</h3>
-                    <p className="text-3xl font-bold text-blue-600">50 km</p>
+                    <p className="text-3xl font-bold text-levaup-petrol">50 km</p>
                     <p className="text-sm text-muted-foreground">
                       Raio do centro de Paraíso/TO
                     </p>
@@ -753,11 +753,11 @@ export default function PrecosPage() {
 
                 <Card className="text-center p-6">
                   <CardContent className="space-y-3">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                      <Clock className="h-8 w-8 text-green-600" />
+                    <div className="w-16 h-16 bg-levaup-green/20 rounded-full flex items-center justify-center mx-auto">
+                      <Clock className="h-8 w-8 text-levaup-green" />
                     </div>
                     <h3 className="font-semibold">Horário de Operação</h3>
-                    <p className="text-3xl font-bold text-green-600">24/7</p>
+                    <p className="text-3xl font-bold text-levaup-green">24/7</p>
                     <p className="text-sm text-muted-foreground">
                       Sempre disponível
                     </p>
@@ -769,7 +769,7 @@ export default function PrecosPage() {
         </section>
 
         {/* Suporte e Termos Legais */}
-        <section className="py-16 bg-gradient-to-br from-primary to-orange-600 text-white">
+        <section className="py-16 bg-levaup-orange text-levaup-white">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <h2 className="text-3xl font-bold">📞 Suporte e Informações</h2>
