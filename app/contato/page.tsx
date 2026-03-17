@@ -246,7 +246,7 @@ export default function ContatoPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Acesse nossa página "Para Motoristas" e preencha o formulário de interesse. Nossa equipe entrará em
+                  Acesse nossa página &quot;Para Motoristas&quot; e preencha o formulário de interesse. Nossa equipe entrará em
                   contato.
                 </p>
               </CardContent>

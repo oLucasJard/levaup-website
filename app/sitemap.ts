@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/motorista/transparencia`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/precos`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/faq`, lastModified, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE_URL}/financeiro`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/sobre`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/contato`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/termos`, lastModified, changeFrequency: "monthly", priority: 0.3 },
